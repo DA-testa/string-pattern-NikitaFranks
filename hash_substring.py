@@ -8,10 +8,11 @@ def read_input():
         while True:
             try:
                 file_name = "tests/" + input().strip()
-                with open(file_name, "r", encoding="utf-8") as f:
-                    pattern = f.readline().strip()
-                    text = f.readline().strip()
-                break
+                if "a" not in file_name:
+                    with open(file_name, "r", encoding="utf-8") as f:
+                        pattern = f.readline().strip()
+                        text = f.readline().strip()
+                    break
             except FileNotFoundError:
                 print("File not found")
     else:
