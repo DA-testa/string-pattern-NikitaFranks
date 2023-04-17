@@ -7,7 +7,7 @@ def read_input():
     elif "f" in input_type:
         while True:
             try:
-                file_name = "tests/" + input().strip()
+                file_name = "./tests/" + input().strip()
                 if "a" not in file_name:
                     with open(file_name, "r", encoding="utf-8") as f:
                         pattern = f.readline().strip()
